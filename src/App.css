@@ -3,8 +3,10 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin; /* Ukurannya diperkecil sedikit agar tidak terlalu besar */
   pointer-events: none;
+  color: #61dafb; /* Memberi warna biru khas React pada huruf P */
+  margin-bottom: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,12 +24,21 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
 }
 
 .App-link {
   color: #61dafb;
+  font-size: 1.2rem;
+  transition: 0.3s;
 }
 
+.App-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Animasi Putar */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +46,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Tambahan dikit buat tombol biar estetik */
+button {
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  background-color: #4fa8c7 !important;
+  transform: scale(1.05);
 }
