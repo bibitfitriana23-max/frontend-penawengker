@@ -1,59 +1,68 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  width: 350px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   text-align: center;
 }
 
-.App-logo {
-  height: 20vmin; /* Ukurannya diperkecil sedikit agar tidak terlalu besar */
-  pointer-events: none;
-  color: #61dafb; /* Memberi warna biru khas React pada huruf P */
-  margin-bottom: 20px;
+.card h1 {
+  margin-bottom: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 20px;
+  gap: 15px;
 }
 
-.App-link {
-  color: #61dafb;
-  font-size: 1.2rem;
+.form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form input:focus {
+  border-color: #0072ff;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #0072ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.App-link:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-/* Animasi Putar */
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Tambahan dikit buat tombol biar estetik */
-button {
-  transition: transform 0.2s, background-color 0.2s;
-}
-
 button:hover {
-  background-color: #4fa8c7 !important;
-  transform: scale(1.05);
+  background-color: #005bd1;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 20px;
+  color: red;
 }
